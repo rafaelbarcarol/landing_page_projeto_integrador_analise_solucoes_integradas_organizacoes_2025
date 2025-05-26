@@ -36,3 +36,6 @@ A página está hospedada via **GitHub Pages**.
 - GitHub Pages (para deploy)
 
 ---
+
+## 🔗 Link do Repositório Principal
+https://github.com/PedroHenrique0910/ProjetoIntegrador2Entrega2025
