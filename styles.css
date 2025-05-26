@@ -11,6 +11,36 @@ body {
   line-height: 1.6;
 }
 
+.header {
+  background-color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4caf50;
+}
+
+.nav a {
+  margin-left: 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #4caf50;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -85,59 +115,6 @@ body {
   transition: all 0.3s ease;
 }
 
-.image-slider {
-  position: relative;
-  width: 80%;
-  height: 100%;
-  max-width: 250px;
-  margin: 0 auto;
-}
-
-.slide-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-  opacity: 0;
-  animation: fadeSlide 6s infinite;
-  transition: opacity 0.8s ease-in-out, transform 0.3s ease, filter 0.3s ease;
-}
-
-.slide-image:hover {
-  filter: brightness(1.1);
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.img2 {
-  animation-delay: 2s;
-}
-
-.img3 {
-  animation-delay: 4s;
-}
-
-@keyframes fadeSlide {
-  0% {
-    opacity: 0;
-  }
-  8% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  38% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .section {
   padding: 40px 20px;
   display: flex;
@@ -180,65 +157,105 @@ body {
   margin-bottom: 8px;
 }
 
-.how-it-works {
-  background-color: #e8f5e9;
+.cta-secondary {
+  background-color: #66bb6a;
+  color: white;
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
-.how-it-works h2 {
-  font-size: 24px;
+.cta-secondary h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cta-secondary p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.pricing {
+  padding: 60px 20px;
+  background-color: #f1f8e9;
+  text-align: center;
+}
+
+.pricing h2 {
   color: #2e7d32;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.steps {
+.pricing-cards {
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-.step {
-  background-color: white;
-  padding: 20px;
-  border-left: 5px solid #4caf50;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-}
-
-.step:hover,
-.step:focus {
-  transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-  outline: none;
-}
-
-.step-number {
-  background-color: #66bb6a;
-  color: white;
-  font-weight: bold;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  font-size: 16px;
 }
 
-.step h3 {
-  font-size: 18px;
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 300px;
+}
+
+.card.destaque {
+  border: 2px solid #4caf50;
+}
+
+.card h3 {
   color: #388e3c;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-.step p {
-  font-size: 14px;
-  color: #555;
+.card .price {
+  font-size: 24px;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card li {
+  margin: 8px 0;
+}
+
+.contact {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #4caf50;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4caf50;
+  outline: none;
 }
 
 .footer {
@@ -310,23 +327,12 @@ body {
     padding: 0 20px;
   }
 
-  .steps {
+  .pricing-cards {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 
-  .step {
+  .card {
     width: 30%;
-  }
-}
-
-@media (max-width: 767px) {
-  .hero-graphic {
-    bottom: -10%;
-    right: 50%;
-    transform: translateX(50%);
-    width: 60vw;
-    max-width: 150px;
-    opacity: 0.15;
   }
 }

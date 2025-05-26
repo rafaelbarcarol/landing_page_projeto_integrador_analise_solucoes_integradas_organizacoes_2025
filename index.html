@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="logo">Vitaliza</div>
+      <nav class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#precos">Preços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
     <main class="container">
       <section class="hero">
         <div class="hero-content">
@@ -15,7 +25,11 @@
             Cuide da sua saúde de forma prática e acessível, conectando você a
             profissionais confiáveis em um só app.
           </p>
-          <a href="#" class="btn-primary">Baixe o App</a>
+          <a
+            href="https://github.com/PedroHenrique0910/ProjetoIntegrador2Entrega2025"
+            class="btn-primary"
+            >Baixe o App</a
+          >
         </div>
         <div class="hero-graphic" aria-hidden="true">
           <svg
@@ -45,19 +59,20 @@
         </div>
       </section>
 
-      <section class="section about">
+      <section class="section about" id="sobre">
         <img src="./image1.jpg" alt="Sobre o app" class="banner-image" />
         <div class="text-content">
           <h2>Sobre o App</h2>
           <p>
             O Vitaliza conecta você a profissionais de saúde como psicólogos,
-            nutricionistas e educadores físicos. Agende consultas online ou
-            presenciais com facilidade e confiança.
+            nutricionistas e educadores físicos com facilidade e confiança. Veja
+            avaliações desses profissionais e aprenda por meio de dicas do nosso
+            blog como ter uma vida mais ativa e saudável!
           </p>
         </div>
       </section>
 
-      <section class="section user-benefits">
+      <section class="section user-benefits" id="funcionalidades">
         <img
           src="./image2.jpg"
           alt="Benefícios para usuários"
@@ -66,7 +81,6 @@
         <div class="text-content">
           <h2>Para Usuários</h2>
           <ul>
-            <li>Agendamento rápido e fácil</li>
             <li>Profissionais com avaliações reais</li>
             <li>Conteúdos confiáveis sobre bem-estar</li>
           </ul>
@@ -83,36 +97,51 @@
           <h2>Para Profissionais</h2>
           <ul>
             <li>Mais visibilidade e novos clientes</li>
-            <li>Ferramentas para agendamento e comunicação</li>
             <li>Compartilhe conteúdo e ganhe autoridade</li>
           </ul>
         </div>
       </section>
 
-      <section class="section how-it-works">
-        <h2>Como Funciona</h2>
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Crie sua conta</h3>
-            <p>Baixe o app e faça seu cadastro como usuário ou profissional.</p>
+      <section class="cta-secondary">
+        <h2>Pronto para transformar sua saúde?</h2>
+        <p>Conheça o Vitaliza e comece a transformar sua saúde hoje mesmo!</p>
+        <a
+          href="https://www.youtube.com/watch?v=LffwF1fW_jI "
+          class="btn-primary"
+          >Veja como é fácil!</a
+        >
+      </section>
+
+      <section class="pricing" id="precos">
+        <h2>Planos e Preços</h2>
+        <div class="pricing-cards">
+          <div class="card">
+            <h3>Gratuito</h3>
+            <p class="price">R$ 0/mês</p>
+            <ul>
+              <li>Perfil público</li>
+              <li>Conteúdos limitados</li>
+            </ul>
           </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>Encontre o profissional ideal</h3>
-            <p>
-              Pesquise por especialidade, veja avaliações e escolha com
-              confiança.
-            </p>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>Agende e comece</h3>
-            <p>
-              Marque consultas online ou presenciais de forma simples e rápida.
-            </p>
+          <div class="card destaque">
+            <h3>Profissional</h3>
+            <p class="price">R$ 29,90/mês</p>
+            <ul>
+              <li>Estatísticas de perfil</li>
+              <li>Conteúdo ilimitado</li>
+            </ul>
           </div>
         </div>
+      </section>
+
+      <section class="contact" id="contato">
+        <h2>Fale Conosco</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu e-mail" required />
+          <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
       </section>
 
       <footer class="footer">
